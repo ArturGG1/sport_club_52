@@ -13,7 +13,7 @@ public class SportClubContext : DbContext
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
-        optionsBuilder.UseSqlite("Data Source=sportclub.db");
+        optionsBuilder.UseSqlite("Data Source=.\\..\\..\\..\\sportclub.db");
     }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
