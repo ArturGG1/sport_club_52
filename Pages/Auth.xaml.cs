@@ -12,42 +12,9 @@ public partial class Auth : Page
     }
     public void Button_Click(object sender, RoutedEventArgs e)
     {
-        string ButtonName = ((Button)sender).Name;
-        string Action = "";
-        if (ButtonName.Contains("Create")) Action = "Create";
-        else Action = "Login";
-        switch (Action)
-        {
-            case "Create":
-            {
-                // TODO: добавить странички для создания
-                string UserType = ButtonName.Replace("Create", "");
-                switch (UserType)
-                {
-                    case "Trainer":
-                        break;
-                    case "Cashier":
-                        break;
-                    case "User":
-                        break;
-                }
-                break;
-            }
-            case "Login":
-            {
-                // TODO: добавить странички для входа
-                string UserType = ButtonName.Replace("Login", "");
-                switch (UserType)
-                {
-                    case "Trainer":
-                        break;
-                    case "Cashier":
-                        break;
-                    case "User":
-                        break;
-                }
-                break;
-            }
-        }
+        string ButtonName = (sender as Button).Name;
+        // TODO: добавить странички для создания
+        // TODO: добавить странички для входа
+        mainWindow.Frame.Source = new Uri($"Pages/{ButtonName}.xaml", UriKind.Relative);
     }
 }

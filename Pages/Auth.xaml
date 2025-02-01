@@ -5,8 +5,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
       xmlns:local="clr-namespace:sport_club_52.Pages"
       mc:Ignorable="d"
-      Title="Auth"
-      Foreground="White" Background="#2E2E2E">
+      Title="Auth" Foreground="White" Background="#2E2E2E">
     <Page.Resources>
         <Style TargetType="Button">
             <Setter Property="Background" Value="#3C3C3C"/>

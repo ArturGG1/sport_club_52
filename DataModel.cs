@@ -1,4 +1,6 @@
-﻿namespace sport_club_52;
+﻿using System.ComponentModel.DataAnnotations.Schema;
+
+namespace sport_club_52;
 
 public class Tariff
 {
