@@ -14,7 +14,7 @@ public partial class CreateClient : Page
         Password.Password = "";
     }
 
-    public void Button_Click(object sender, RoutedEventArgs e)
+    private void Button_Click(object sender, RoutedEventArgs e)
     {
         if (clientName == "" || clientPassword == "") return;
         using (var context = new SportClubContext())
@@ -26,12 +26,12 @@ public partial class CreateClient : Page
         MessageBox.Show("Клиент успешно создан.", "ОК", MessageBoxButton.OK, MessageBoxImage.Information);
         mainWindow.Frame.Source = new Uri("Pages/Auth.xaml", UriKind.Relative);
     }
-    public void TextBox_OnTextChanged(object sender, TextChangedEventArgs e)
+    private void TextBox_OnTextChanged(object sender, TextChangedEventArgs e)
     {
         var textBox = sender as TextBox;
         if (textBox.Text != "") clientName = textBox.Text;
     }
-    public void PasswordBox_OnPasswordChanged(object sender, RoutedEventArgs e)
+    private void PasswordBox_OnPasswordChanged(object sender, RoutedEventArgs e)
     {
         var passwordBox = sender as PasswordBox;
         if (passwordBox.Password != "") clientPassword = passwordBox.Password;
