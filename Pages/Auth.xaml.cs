@@ -10,10 +10,9 @@ public partial class Auth : Page
     {
         InitializeComponent();
     }
-    public void Button_Click(object sender, RoutedEventArgs e)
+    private void Button_Click(object sender, RoutedEventArgs e)
     {
         string ButtonName = (sender as Button).Name;
-        // TODO: добавить странички для создания
         // TODO: добавить странички для входа
         // TODO: добавить странички для удаления
         mainWindow.Frame.Source = new Uri($"Pages/{ButtonName}.xaml", UriKind.Relative);
