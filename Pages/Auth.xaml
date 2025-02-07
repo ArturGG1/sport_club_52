@@ -33,6 +33,7 @@
         <Grid.RowDefinitions>
             <RowDefinition/>
             <RowDefinition/>
+            <RowDefinition/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
@@ -45,5 +46,8 @@
         <Button Grid.Row="1" Grid.Column="0" Name="LoginTrainer" Content="войти за тренера"/>
         <Button Grid.Row="1" Grid.Column="1" Name="LoginCashier" Content="войти за кассира"/>
         <Button Grid.Row="1" Grid.Column="2" Name="LoginClient" Content="войти за клиента"/>
+        <Button Grid.Row="2" Grid.Column="0" Name="DeleteTrainer" Content="удалить тренера"/>
+        <Button Grid.Row="2" Grid.Column="1" Name="DeleteCashier" Content="удалить кассира"/>
+        <Button Grid.Row="2" Grid.Column="2" Name="DeleteClient" Content="удалить клиента"/>
     </Grid>
 </Page>

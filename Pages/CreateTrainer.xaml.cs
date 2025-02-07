@@ -10,6 +10,8 @@ public partial class CreateTrainer : Page
     public CreateTrainer()
     {
         InitializeComponent();
+        Name.Text = "";
+        Password.Password = "";
     }
     public void Button_Click(object sender, RoutedEventArgs e)
     {
@@ -20,8 +22,7 @@ public partial class CreateTrainer : Page
             context.Trainers.Add(trainer);
             context.SaveChanges();
         }
-        Name.Text = "";
-        Password.Password = "";
+        MessageBox.Show("Тренер успешно создан.", "ОК", MessageBoxButton.OK, MessageBoxImage.Information);
         mainWindow.Frame.Source = new Uri("Pages/Auth.xaml", UriKind.Relative);
     }
     public void TextBox_OnTextChanged(object sender, TextChangedEventArgs e)
