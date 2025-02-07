@@ -13,7 +13,10 @@ public class SportClubContext : DbContext
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
-        optionsBuilder.UseSqlite("Data Source=C:\\aksis\\2025\\01_18\\sport_club_52\\sportclub.db");
+        optionsBuilder.UseNpgsql("Host=localhost;" +
+                                 "Database=sportclub;" +
+                                 "Username=clown;" +
+                                 "Password=12345678");
     }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
