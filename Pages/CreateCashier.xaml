@@ -57,15 +57,17 @@
             <RowDefinition/>
             <RowDefinition/>
             <RowDefinition/>
+            <RowDefinition/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <TextBlock Grid.Row="0" Grid.Column="0" Text="ФИО:"/>
-        <TextBlock Grid.Row="1" Grid.Column="0" Text="Пароль:"/>
-        <TextBox Name="Name" Grid.Row="0" Grid.Column="1"/>
-        <PasswordBox Name="Password" Grid.Row="1" Grid.Column="1" PasswordChar="ඞ"/>
-        <Button Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Content="Создать аккаунт"/>
+        <Button Name="GoBack" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Content="Вернуться назад"/>
+        <TextBlock Grid.Row="1" Grid.Column="0" Text="ФИО:"/>
+        <TextBlock Grid.Row="2" Grid.Column="0" Text="Пароль:"/>
+        <TextBox Name="Name" Grid.Row="1" Grid.Column="1"/>
+        <PasswordBox Name="Password" Grid.Row="2" Grid.Column="1" PasswordChar="ඞ"/>
+        <Button Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" Content="Создать аккаунт"/>
     </Grid>
 </Page>

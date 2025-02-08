@@ -15,6 +15,8 @@ public partial class CreateTrainer : Page
     }
     private void Button_Click(object sender, RoutedEventArgs e)
     {
+        if ((sender as Button).Name == "GoBack") 
+            mainWindow.Frame.Source = new Uri("Pages/Auth.xaml", UriKind.Relative);
         if (trainerName == "" || trainerPassword == "") return;
         using (var context = new SportClubContext())
         {

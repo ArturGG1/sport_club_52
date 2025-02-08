@@ -28,6 +28,7 @@
             <Setter Property="Foreground" Value="White"/>
             <Setter Property="Margin" Value="10"/>
             <Setter Property="FontSize" Value="24"/>
+            <Setter Property="PasswordChar" Value="ඞ"/>
             <EventSetter Event="PasswordChanged" Handler="PasswordBox_OnPasswordChanged"/>
         </Style>
         <Style TargetType="Button">
@@ -51,9 +52,19 @@
             </Setter>
             <EventSetter Event="Click" Handler="Button_Click"/>
         </Style>
+        <Style TargetType="DatePicker">
+            <Setter Property="Background" Value="#3C3C3C"/>
+            <Setter Property="Foreground" Value="#3C3C3C"/>
+            <Setter Property="Margin" Value="10"/>
+            <EventSetter Event="SelectedDateChanged" Handler="DatePicker_OnSelectedDateChanged"/>
+        </Style>
     </Page.Resources>
     <Grid>
         <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
             <RowDefinition/>
             <RowDefinition/>
             <RowDefinition/>
@@ -62,10 +73,17 @@
             <ColumnDefinition/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <TextBlock Grid.Row="0" Grid.Column="0" Text="ФИО:"/>
-        <TextBlock Grid.Row="1" Grid.Column="0" Text="Пароль:"/>
-        <TextBox Name="Name" Grid.Row="0" Grid.Column="1"/>
-        <PasswordBox Name="Password" Grid.Row="1" Grid.Column="1" PasswordChar="ඞ"/>
-        <Button Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Content="Создать аккаунт"/>
+        <Button Name="GoBack" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Content="Вернуться назад"/>
+        <TextBlock Grid.Row="1" Grid.Column="0" Text="ФИО:"/>
+        <TextBlock Grid.Row="2" Grid.Column="0" Text="Пароль:"/>
+        <TextBlock Grid.Row="3" Grid.Column="0" Text="Дата рождения:"/>
+        <TextBlock Grid.Row="4" Grid.Column="0" Text="Номер телефона:"/>
+        <TextBlock Grid.Row="5" Grid.Column="0" Text="Адрес:"/>
+        <TextBox Name="Name" Grid.Row="1" Grid.Column="1"/>
+        <PasswordBox Name="Password" Grid.Row="2" Grid.Column="1"/>
+        <DatePicker Name="Birthday" Grid.Row="3" Grid.Column="1"/>
+        <TextBox Name="Phone" Grid.Row="4" Grid.Column="1"/>
+        <TextBox Name="Address" Grid.Row="5" Grid.Column="1"/>
+        <Button Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="2" Content="Создать аккаунт"/>
     </Grid>
 </Page>

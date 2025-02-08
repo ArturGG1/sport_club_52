@@ -14,10 +14,14 @@ public partial class LookAtAllUsers : Page
 
     private void UpdatePanel(string Type)
     {
-        //TODO: передалать эти костыли
         Panel.Children.Clear();
+        TextBlock textBlock = new TextBlock();
+        textBlock.FontSize = 18;
+        textBlock.Text = "Подождите...";
+        Panel.Children.Add(textBlock);
         using (var context = new SportClubContext())
         {
+            Panel.Children.Clear();
             switch (Type)
             {
                 case "Trainers":
@@ -75,7 +79,13 @@ public partial class LookAtAllUsers : Page
                     {
                         TextBlock tb = new TextBlock();
                         tb.FontSize = 18;
-                        tb.Text = $"ID {client.Id}:\t\"{client.Name}\" с паролем \"{client.Password}\"";
+                        tb.Text = $"ID {client.Id}:\t\"{client.Name}\"\n" +
+                                  $"Пароль: \"{client.Password}\"\n" +
+                                  $"День рождения: {client.Birthday}\n" +
+                                  $"Номер телефона: {client.Phone}\n" +
+                                  $"Адрес: {client.Address}\n" +
+                                  $"ID абонемента: {client.MembershipId}\n" +
+                                  $"Номер шкафа:{client.BoxId}\n\n";
                         Panel.Children.Add(tb);
                     }
                     break;

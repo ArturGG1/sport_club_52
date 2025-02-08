@@ -7,7 +7,7 @@ public class Tariff
     public uint Id { get; set; }
     public string Title { get; set; }
     public string Description { get; set; }
-    public uint TrainerId { get; set; } // внешний ключ на тренера
+    public uint? TrainerId { get; set; } // внешний ключ на тренера
     public Trainer? Trainer { get; set; }
     public byte Visits { get; set; }
     public uint Price { get; set; } 
@@ -20,9 +20,9 @@ public class Client
     public DateOnly Birthday { get; set; }
     public string Phone { get; set; }
     public string Address { get; set; }
-    public uint MembershipId { get; set; } // внешний ключ на абонемент
-    public Membership Membership { get; set; } // абонемент
-    public uint BoxId { get; set; } // номер шкафа
+    public uint? MembershipId { get; set; } // внешний ключ на абонемент
+    public Membership? Membership { get; set; } // абонемент
+    public uint? BoxId { get; set; } // номер шкафа
 }
 public class Membership
 {
@@ -38,7 +38,7 @@ public class Payment
 {
     public uint Id { get; set; }
     public uint Amount { get; set; }
-    public DateTime PaymentDate { get; set; }
+    public DateOnly PaymentDate { get; set; }
     public uint CashierId { get; set; } // внешний ключ на кассира
     public Cashier Cashier { get; set; }
 }
