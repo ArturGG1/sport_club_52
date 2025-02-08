@@ -15,13 +15,8 @@ public partial class LookAtAllUsers : Page
     private void UpdatePanel(string Type)
     {
         Panel.Children.Clear();
-        TextBlock textBlock = new TextBlock();
-        textBlock.FontSize = 18;
-        textBlock.Text = "Подождите...";
-        Panel.Children.Add(textBlock);
         using (var context = new SportClubContext())
         {
-            Panel.Children.Clear();
             switch (Type)
             {
                 case "Trainers":
