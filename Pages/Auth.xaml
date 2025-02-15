@@ -35,6 +35,7 @@
             <RowDefinition/>
             <RowDefinition/>
             <RowDefinition/>
+            <RowDefinition/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
@@ -47,9 +48,12 @@
         <Button Grid.Row="1" Grid.Column="0" Name="LoginTrainer" Content="войти за тренера"/>
         <Button Grid.Row="1" Grid.Column="1" Name="LoginCashier" Content="войти за кассира"/>
         <Button Grid.Row="1" Grid.Column="2" Name="LoginClient" Content="войти за клиента"/>
-        <Button Grid.Row="2" Grid.Column="0" Name="DeleteTrainer" Content="удалить тренера"/>
-        <Button Grid.Row="2" Grid.Column="1" Name="DeleteCashier" Content="удалить кассира"/>
-        <Button Grid.Row="2" Grid.Column="2" Name="DeleteClient" Content="удалить клиента"/>
-        <Button Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="3" Name="LookAtAllUsers" Content="просмотреть пользователей"/>
+        <Button Grid.Row="2" Grid.Column="0" Name="UpdateTrainer" Content="изменить тренера"/>
+        <Button Grid.Row="2" Grid.Column="1" Name="UpdateCashier" Content="изменить кассира"/>
+        <Button Grid.Row="2" Grid.Column="2" Name="UpdateClient" Content="изменить клиента"/>
+        <Button Grid.Row="3" Grid.Column="0" Name="DeleteTrainer" Content="удалить тренера"/>
+        <Button Grid.Row="3" Grid.Column="1" Name="DeleteCashier" Content="удалить кассира"/>
+        <Button Grid.Row="3" Grid.Column="2" Name="DeleteClient" Content="удалить клиента"/>
+        <Button Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="3" Name="LookAtAllUsers" Content="просмотреть пользователей"/>
     </Grid>
 </Page>
