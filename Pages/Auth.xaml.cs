@@ -14,7 +14,6 @@ public partial class Auth : Page
     {
         string ButtonName = (sender as Button).Name;
         // TODO: добавить странички для входа
-        // TODO: добавить странички для удаления
         mainWindow.Frame.Source = new Uri($"Pages/{ButtonName}.xaml", UriKind.Relative);
     }
 }
