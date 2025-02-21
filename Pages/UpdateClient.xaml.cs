@@ -15,6 +15,7 @@ public partial class UpdateClient : Page
 
     public UpdateClient(Client client, uint clientId)
     {
+        InitializeComponent();
         Name.Text = client.Name;
         Password.Password = client.Password;
         Phone.Text = client.Phone;

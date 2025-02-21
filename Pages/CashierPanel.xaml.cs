@@ -28,6 +28,21 @@ public partial class CashierPanel : Page
             userPanel.Close();
             return;
         }
+        if (button.Name == "UpdateTariff")
+        {
+            uint tariffId;
+            try
+            {
+                tariffId = uint.Parse(tariffIdBox.Text);
+            }
+            catch (Exception)
+            {
+                return;
+            }
+            Pages.UpdateTariff updateTariff = new Pages.UpdateTariff(tariffId);
+            userPanel.Frame.Navigate(updateTariff);
+            return;
+        }
         userPanel.Frame.Navigate(new Uri($"../Pages/{button.Name}.xaml", UriKind.Relative));
     }
 }
