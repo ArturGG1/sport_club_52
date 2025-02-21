@@ -29,8 +29,9 @@ public class Membership
     public uint Id { get; set; }
     public uint TariffId { get; set; } // внешний ключ на тариф
     public Tariff Tariff { get; set; }
-    public uint PaymentId { get; set; } // внешний ключ на оплату
-    public Payment Payment { get; set; }
+    public uint? PaymentId { get; set; } // внешний ключ на оплату
+    public Payment? Payment { get; set; }
+    public bool Paid { get; set; } // оплачен ли абонемент
     public byte VisitsLeft { get; set; } // кол-во оставшихся занятий
     public bool Suspended { get; set; } // приостановлен ли абонемент
 }
