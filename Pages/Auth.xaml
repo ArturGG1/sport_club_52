@@ -51,7 +51,7 @@
         <Button Grid.Row="2" Grid.Column="0" Name="DeleteTrainer" Content="удалить тренера"/>
         <Button Grid.Row="2" Grid.Column="1" Name="DeleteCashier" Content="удалить кассира"/>
         <Button Grid.Row="2" Grid.Column="2" Name="DeleteClient" Content="удалить клиента"/>
-        <Button Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="3" Name="UpdateUser" Content="изменить пользователя"/>
-        <Button Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="3" Name="LookAtAllUsers" Content="просмотреть пользователей"/>
+        <Button Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="3" Name="UpdateUser" Content="изменить пользователя"/> 
+        <Button Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="3" Name="LookAtAllUsers" Content="просмотреть пользователей (и не только)"/>
     </Grid>
 </Page>

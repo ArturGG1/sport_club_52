@@ -56,8 +56,8 @@
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         <Button Name="GoBack" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Content="Вернуться назад"/>
-        <TextBlock Grid.Row="1" Grid.Column="0" Text="ID тренера:"/>
+        <TextBlock Grid.Row="1" Grid.Column="0" Text="ID кассира:"/>
         <TextBox Name="cashierID" Grid.Row="1" Grid.Column="1"/>
-        <Button Name="Delete" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Content="Удалить тренера"/>
+        <Button Name="Delete" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Content="Удалить кассира"/>
     </Grid>
 </Page>

@@ -1,5 +1,6 @@
 ﻿using System.Windows;
 using System.Windows.Controls;
+using sport_club_52.Windows;
 
 namespace sport_club_52.Pages;
 
@@ -30,8 +31,12 @@ public partial class LoginCashier : Page
                 MessageBox.Show("Кассир не найден.\nПроверьте корректность введённых данных.", "ОШИБКА", MessageBoxButton.OK, MessageBoxImage.Error);
                 return;
             }
+            UserPanel userPanel = new UserPanel();
+            CashierPanel cashierPanel = new CashierPanel(cashier);
+            userPanel.Frame.Navigate(cashierPanel);
+            userPanel.Show();
+            mainWindow.Hide();
         }
-        //TODO: сделать страницу для пользователя
     }
 
     private void TextBox_OnTextChanged(object sender, TextChangedEventArgs e)

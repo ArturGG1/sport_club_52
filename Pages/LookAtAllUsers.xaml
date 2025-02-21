@@ -44,6 +44,7 @@
                     <Button Name="Trainers" Content="Тренеры"/>
                     <Button Name="Cashiers" Content="Кассиры"/>
                     <Button Name="Clients" Content="Клиенты"/>
+                    <Button Name="Tariffs" Content="Тарифы"/>
                 </StackPanel>
             </ScrollViewer>
             <Button Grid.Column="1" Content="Назад" Click="GoBack"/>

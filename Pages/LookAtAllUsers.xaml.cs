@@ -85,6 +85,30 @@ public partial class LookAtAllUsers : Page
                     }
                     break;
                 }
+                case "Tariffs":
+                {
+                    var tariffs = context.Tariffs.ToList();
+                    if (tariffs.Count == 0)
+                    {
+                        TextBlock tb = new TextBlock();
+                        tb.FontSize = 18;
+                        tb.Text = "(тарифов нет)";
+                        Panel.Children.Add(tb);
+                        break;
+                    }
+                    foreach (var tariff in tariffs)
+                    {
+                        TextBlock tb = new TextBlock();
+                        tb.FontSize = 18;
+                        tb.Text = $"ID {tariff.Id}:\tТариф \"{tariff.Title}\"\n" +
+                                  $"{tariff.Description}\n" +
+                                  $"ID тренера: {tariff.TrainerId}\n" +
+                                  $"Кол-во посещений: {tariff.Visits}\n" +
+                                  $"Стоимость: {tariff.Price} руб.\n\n";
+                        Panel.Children.Add(tb);
+                    }
+                    break;
+                }
                 default:
                     break;
             }
